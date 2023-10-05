@@ -1,4 +1,4 @@
-type CardType = {
+export type CardType = {
   id: number;
   title: string;
   description: string;
@@ -33,7 +33,43 @@ export const cards = [
     priority: "Low",
   },
   {
-    id: 4,
+    id: 5,
+    title: "Card 6",
+    description: "do some work 5",
+    priority: "High",
+  },
+  {
+    id: 11,
+    title: "Card 7",
+    description: "do some work 5",
+    priority: "High",
+  },
+  {
+    id: 6,
+    title: "Card 8",
+    description: "do some work 5",
+    priority: "High",
+  },
+  {
+    id: 7,
+    title: "Card 9",
+    description: "do some work 5",
+    priority: "High",
+  },
+  {
+    id: 8,
+    title: "Card 5",
+    description: "do some work 5",
+    priority: "High",
+  },
+  {
+    id: 9,
+    title: "Card 5",
+    description: "do some work 5",
+    priority: "High",
+  },
+  {
+    id: 10,
     title: "Card 5",
     description: "do some work 5",
     priority: "High",

@@ -1,16 +1,24 @@
 import { CardContent, Typography, CardActions, Button } from "@mui/material";
 import Card from "@mui/material/Card";
 import React from "react";
+import { useDraggable } from "../pages/useDraggable";
 
 type CardType = {
   title: string;
   description: string;
-  //   priority: "High" | "Medium" | "Low";
+  id: number;
 };
 
-export const CardComponent = ({ title, description }: CardType) => {
+export const CardComponent = ({ title, description, id }: CardType) => {
+  const { handleDragStart } = useDraggable();
+
   return (
-    <Card variant="outlined">
+    <Card
+      variant="outlined"
+      draggable
+      onDragStart={(e) => handleDragStart(e, id)}
+      sx={{ my: 2 }}
+    >
       <React.Fragment>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -21,7 +29,9 @@ export const CardComponent = ({ title, description }: CardType) => {
         </CardContent>
         <CardActions>
           <Button size="small">Delete</Button>
-          <Button size="small">Edit</Button>
+          <Button onClick={() => alert(1)} size="small">
+            Edit
+          </Button>
         </CardActions>
       </React.Fragment>
     </Card>
