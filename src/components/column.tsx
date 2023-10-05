@@ -36,7 +36,11 @@ export const Column = ({ type }: ColumnType) => {
       <Box
         sx={
           isDragging
-            ? { border: `1px dashed ${theme.palette.primary.dark}` }
+            ? {
+                border: `1px dashed ${theme.palette.primary.dark}`,
+                minWidth: 100,
+                minHeight: 150,
+              }
             : {}
         }
         px={6}
