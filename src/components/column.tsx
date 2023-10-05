@@ -24,6 +24,7 @@ export const Column = ({ type }: ColumnType) => {
       lg={3}
       md={3.6}
       sm={5.5}
+      item
       container
       direction="column"
       alignItems="center"
